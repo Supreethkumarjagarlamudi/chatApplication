@@ -1,0 +1,161 @@
+:root {
+    --primary-font: "SUSE", sans-serif;
+    --secondary-font: "Kaushan Script", cursive;
+    --primary-white: #ffffff;
+    --primary-black: #000000;
+    --primary-font-size: 25px;
+    --secondary-font-size: 19px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--primary-font);
+}
+
+.mainContainer{
+    height: 100vh;
+    width: 100%;
+}
+.headingContainer{
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.heading{
+    color: var(--primary-black);
+    font-size: var(--primary-font-size);
+    font-family: var(--secondary-font);
+}
+.RegisterMainContainer{
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.RegisterForm{
+    width: 400px;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: var(--primary-white);
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.2);
+}
+.RegisterHeading{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: var(--primary-font-size);
+    margin-bottom: 10px;
+}
+.RegisterForm form{
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    flex-direction: column;
+}
+.RegisterForm form .form-label{
+    font-size: var(--secondary-font-size);
+}
+.RegisterForm form .input{
+    height: 40px;
+    font-size: var(--secondary-font-size);
+}
+.mobileInput{
+    height: 40px;
+    display: flex;
+    gap: 5px;
+}
+.countryCode{
+    width: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.mobileInputContainer{
+    width: 90%;
+    display: flex;
+    gap: 2px;
+}
+.mobileinp{
+    width: 90%;
+}
+.statusContainer{
+    width: 10%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.btnContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.btnContainer button{
+    height: 40px;
+    width: fit-content;
+    padding: 0px 10px 0px 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: var(--secondary-font-size);
+    color: var(--primary-white);
+    background-color: var(--primary-black);
+    border-radius: 10px;
+    border: none;
+    transition: 0.2s ease-in-out;
+    margin-top: 10px;
+}
+.btnContainer button:hover{
+    box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.2);
+    background-color: var(--primary-white);
+    color: var(--primary-black);
+}
+.check, .wrong{
+    height: 100%;
+    width: 100%;
+}
+.check{
+    color: green;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: var(--primary-font);
+}
+
+.wrong{
+    color: red;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: var(--primary-font);
+}
+.valid{
+    display: none;
+}
+
+.mobileinp:valid ~ .statusContainer .valid{
+    display: flex;
+}
+.mobileinp:valid ~ .statusContainer .novalid{
+    display: none;
+}
+.mobileinp:invalid ~ .statusContainer .valid{
+    display: none;
+}
+.mobileinp:invalid ~ .statusContainer .novalid{
+    display: flex;
+}
+.passinp:valid:focus{
+    border: 1px solid green;
+}
+.passinp:invalid:focus{
+    border: 1px solid red;
+}
+.logUp{
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
